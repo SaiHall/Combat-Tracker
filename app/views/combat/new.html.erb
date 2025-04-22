@@ -6,7 +6,7 @@
 <p>Which players are in this combat?</p>
   <% @player_characters.each do |character| %>
   <div>
-    <%= form.check_box character.id, {yes: 1}%>
+    <%= form.check_box character.id%>
     <%= form.label :name, character.name%>
   </div>  
   <% end %>
