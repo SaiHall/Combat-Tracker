@@ -1,3 +1,14 @@
 <h1>Combat New</h1>
 
 <p> Form for new combat entry</p>
+
+<%= form_with url: "/combat", method: :post do |form| %>
+<p>Which players are in this combat?</p>
+  <% @player_characters.each do |character| %>
+  <div>
+    <%= form.check_box character.id, {yes: 1}%>
+    <%= form.label :name, character.name%>
+  </div>  
+  <% end %>
+<%= form.submit "Save Combat info" %>
+<% end %>
