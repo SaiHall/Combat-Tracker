@@ -1,0 +1,3 @@
+class Combat < ApplicationRecord
+  
+end

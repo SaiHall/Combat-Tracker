@@ -1,0 +1,16 @@
+<%= form_with url: "/player_characters", method: :post do |form| %>
+<p>Enter your player character's information:</p>
+  <div>
+  <%= form.label :name%>
+  <%= form.text_field :name%>
+  </div>
+  <%= form.label :hp, "Health Points" %>
+  <%= form.number_field :hp,  in: 1..200, step: 1%>
+  <%= form.label :ac, "Armor Class" %>
+  <%= form.number_field :ac,  in: 1..20, step: 1%>
+  <div>
+  <%= form.label :notes, "Notes" %>
+  <%= form.text_area :notes%>
+  </div>
+  <%= form.submit "Save Character info" %>
+<% end %>

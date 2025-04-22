@@ -1,0 +1,12 @@
+<h1>Combat Show</h1>
+
+  <h2>Combat ID:<%= @combat.id %></h2>
+  <h2>Combat Active:<%= @combat.combat_active %></h2>
+  <h2>Combat Round:<%= @combat.round %></h2>
+  <% @pcc.each do |pcc| %>
+  <p>Player Character Combat ID:<%= pcc.id %></p>
+    <a href="/player_characters/<%= pcc.player_character_id %>%" >Player ID:<%= pcc.player_character_id %></a>
+  <% end %>
+  <% @players.each do |player| %>
+    <h3><%= player.name%></h3>
+  <% end%>
