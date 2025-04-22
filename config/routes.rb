@@ -16,4 +16,9 @@ Rails.application.routes.draw do
   get "/player_characters/new", to: "player_characters#new"
   post "/player_characters", to:"player_characters#create"
   get "/player_characters/:id", to: "player_characters#show"
+
+  get "/combat", to: "combat#index"
+  get "/combat/new", to: "combat#new"
+  post "/combat", to: "combat#create"
+  get "/combat/:id", to: "combat#show"
 end
