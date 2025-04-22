@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get "/player_characters", to: "player_characters#index"
   get "/player_characters/new", to: "player_characters#new"
   post "/player_characters", to:"player_characters#create"
+  get "/player_characters/:id", to: "player_characters#show"
 end
